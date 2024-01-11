@@ -1,0 +1,667 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6502C3272B4FB4910045CDA4 /* course-explorer-api in Frameworks */ = {isa = PBXBuildFile; productRef = 6502C3262B4FB4910045CDA4 /* course-explorer-api */; };
+		6502C3292B4FB4AA0045CDA4 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6502C3282B4FB4AA0045CDA4 /* DetailView.swift */; };
+		6572F9342B4E761700507A6C /* Better_Course_ExplorerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6572F9332B4E761700507A6C /* Better_Course_ExplorerApp.swift */; };
+		6572F9362B4E761700507A6C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6572F9352B4E761700507A6C /* ContentView.swift */; };
+		6572F9382B4E761900507A6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6572F9372B4E761900507A6C /* Assets.xcassets */; };
+		6572F93C2B4E761900507A6C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6572F93B2B4E761900507A6C /* Preview Assets.xcassets */; };
+		6572F9462B4E761900507A6C /* Better_Course_ExplorerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6572F9452B4E761900507A6C /* Better_Course_ExplorerTests.swift */; };
+		6572F9502B4E761900507A6C /* Better_Course_ExplorerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6572F94F2B4E761900507A6C /* Better_Course_ExplorerUITests.swift */; };
+		6572F9522B4E761900507A6C /* Better_Course_ExplorerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6572F9512B4E761900507A6C /* Better_Course_ExplorerUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6572F9422B4E761900507A6C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6572F9282B4E761700507A6C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6572F92F2B4E761700507A6C;
+			remoteInfo = "Better Course Explorer";
+		};
+		6572F94C2B4E761900507A6C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6572F9282B4E761700507A6C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6572F92F2B4E761700507A6C;
+			remoteInfo = "Better Course Explorer";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6502C3252B4FB48B0045CDA4 /* Better-Course-Explorer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Better-Course-Explorer-Info.plist"; sourceTree = SOURCE_ROOT; };
+		6502C3282B4FB4AA0045CDA4 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		6572F9302B4E761700507A6C /* Better Course Explorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Better Course Explorer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6572F9332B4E761700507A6C /* Better_Course_ExplorerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Better_Course_ExplorerApp.swift; sourceTree = "<group>"; };
+		6572F9352B4E761700507A6C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		6572F9372B4E761900507A6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6572F9392B4E761900507A6C /* Better_Course_Explorer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Better_Course_Explorer.entitlements; sourceTree = "<group>"; };
+		6572F93B2B4E761900507A6C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6572F9412B4E761900507A6C /* Better Course ExplorerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Better Course ExplorerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6572F9452B4E761900507A6C /* Better_Course_ExplorerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Better_Course_ExplorerTests.swift; sourceTree = "<group>"; };
+		6572F94B2B4E761900507A6C /* Better Course ExplorerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Better Course ExplorerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6572F94F2B4E761900507A6C /* Better_Course_ExplorerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Better_Course_ExplorerUITests.swift; sourceTree = "<group>"; };
+		6572F9512B4E761900507A6C /* Better_Course_ExplorerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Better_Course_ExplorerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6572F92D2B4E761700507A6C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6502C3272B4FB4910045CDA4 /* course-explorer-api in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6572F93E2B4E761900507A6C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6572F9482B4E761900507A6C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6502C3242B4FB4890045CDA4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6572F9272B4E761700507A6C = {
+			isa = PBXGroup;
+			children = (
+				6572F9322B4E761700507A6C /* Better Course Explorer */,
+				6572F9442B4E761900507A6C /* Better Course ExplorerTests */,
+				6572F94E2B4E761900507A6C /* Better Course ExplorerUITests */,
+				6572F9312B4E761700507A6C /* Products */,
+				6502C3242B4FB4890045CDA4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6572F9312B4E761700507A6C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6572F9302B4E761700507A6C /* Better Course Explorer.app */,
+				6572F9412B4E761900507A6C /* Better Course ExplorerTests.xctest */,
+				6572F94B2B4E761900507A6C /* Better Course ExplorerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6572F9322B4E761700507A6C /* Better Course Explorer */ = {
+			isa = PBXGroup;
+			children = (
+				6502C3252B4FB48B0045CDA4 /* Better-Course-Explorer-Info.plist */,
+				6572F9332B4E761700507A6C /* Better_Course_ExplorerApp.swift */,
+				6572F9352B4E761700507A6C /* ContentView.swift */,
+				6502C3282B4FB4AA0045CDA4 /* DetailView.swift */,
+				6572F9372B4E761900507A6C /* Assets.xcassets */,
+				6572F9392B4E761900507A6C /* Better_Course_Explorer.entitlements */,
+				6572F93A2B4E761900507A6C /* Preview Content */,
+			);
+			path = "Better Course Explorer";
+			sourceTree = "<group>";
+		};
+		6572F93A2B4E761900507A6C /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				6572F93B2B4E761900507A6C /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6572F9442B4E761900507A6C /* Better Course ExplorerTests */ = {
+			isa = PBXGroup;
+			children = (
+				6572F9452B4E761900507A6C /* Better_Course_ExplorerTests.swift */,
+			);
+			path = "Better Course ExplorerTests";
+			sourceTree = "<group>";
+		};
+		6572F94E2B4E761900507A6C /* Better Course ExplorerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6572F94F2B4E761900507A6C /* Better_Course_ExplorerUITests.swift */,
+				6572F9512B4E761900507A6C /* Better_Course_ExplorerUITestsLaunchTests.swift */,
+			);
+			path = "Better Course ExplorerUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6572F92F2B4E761700507A6C /* Better Course Explorer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6572F9552B4E761900507A6C /* Build configuration list for PBXNativeTarget "Better Course Explorer" */;
+			buildPhases = (
+				6572F92C2B4E761700507A6C /* Sources */,
+				6572F92D2B4E761700507A6C /* Frameworks */,
+				6572F92E2B4E761700507A6C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Better Course Explorer";
+			packageProductDependencies = (
+				6502C3262B4FB4910045CDA4 /* course-explorer-api */,
+			);
+			productName = "Better Course Explorer";
+			productReference = 6572F9302B4E761700507A6C /* Better Course Explorer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6572F9402B4E761900507A6C /* Better Course ExplorerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6572F9582B4E761900507A6C /* Build configuration list for PBXNativeTarget "Better Course ExplorerTests" */;
+			buildPhases = (
+				6572F93D2B4E761900507A6C /* Sources */,
+				6572F93E2B4E761900507A6C /* Frameworks */,
+				6572F93F2B4E761900507A6C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6572F9432B4E761900507A6C /* PBXTargetDependency */,
+			);
+			name = "Better Course ExplorerTests";
+			productName = "Better Course ExplorerTests";
+			productReference = 6572F9412B4E761900507A6C /* Better Course ExplorerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6572F94A2B4E761900507A6C /* Better Course ExplorerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6572F95B2B4E761900507A6C /* Build configuration list for PBXNativeTarget "Better Course ExplorerUITests" */;
+			buildPhases = (
+				6572F9472B4E761900507A6C /* Sources */,
+				6572F9482B4E761900507A6C /* Frameworks */,
+				6572F9492B4E761900507A6C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6572F94D2B4E761900507A6C /* PBXTargetDependency */,
+			);
+			name = "Better Course ExplorerUITests";
+			productName = "Better Course ExplorerUITests";
+			productReference = 6572F94B2B4E761900507A6C /* Better Course ExplorerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6572F9282B4E761700507A6C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1510;
+				LastUpgradeCheck = 1510;
+				TargetAttributes = {
+					6572F92F2B4E761700507A6C = {
+						CreatedOnToolsVersion = 15.1;
+					};
+					6572F9402B4E761900507A6C = {
+						CreatedOnToolsVersion = 15.1;
+						TestTargetID = 6572F92F2B4E761700507A6C;
+					};
+					6572F94A2B4E761900507A6C = {
+						CreatedOnToolsVersion = 15.1;
+						TestTargetID = 6572F92F2B4E761700507A6C;
+					};
+				};
+			};
+			buildConfigurationList = 6572F92B2B4E761700507A6C /* Build configuration list for PBXProject "Better Course Explorer" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6572F9272B4E761700507A6C;
+			packageReferences = (
+				6502C31F2B4FA3C90045CDA4 /* XCRemoteSwiftPackageReference "course-explorer-api" */,
+			);
+			productRefGroup = 6572F9312B4E761700507A6C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6572F92F2B4E761700507A6C /* Better Course Explorer */,
+				6572F9402B4E761900507A6C /* Better Course ExplorerTests */,
+				6572F94A2B4E761900507A6C /* Better Course ExplorerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6572F92E2B4E761700507A6C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6572F93C2B4E761900507A6C /* Preview Assets.xcassets in Resources */,
+				6572F9382B4E761900507A6C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6572F93F2B4E761900507A6C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6572F9492B4E761900507A6C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6572F92C2B4E761700507A6C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6572F9362B4E761700507A6C /* ContentView.swift in Sources */,
+				6502C3292B4FB4AA0045CDA4 /* DetailView.swift in Sources */,
+				6572F9342B4E761700507A6C /* Better_Course_ExplorerApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6572F93D2B4E761900507A6C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6572F9462B4E761900507A6C /* Better_Course_ExplorerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6572F9472B4E761900507A6C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6572F9522B4E761900507A6C /* Better_Course_ExplorerUITestsLaunchTests.swift in Sources */,
+				6572F9502B4E761900507A6C /* Better_Course_ExplorerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6572F9432B4E761900507A6C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6572F92F2B4E761700507A6C /* Better Course Explorer */;
+			targetProxy = 6572F9422B4E761900507A6C /* PBXContainerItemProxy */;
+		};
+		6572F94D2B4E761900507A6C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6572F92F2B4E761700507A6C /* Better Course Explorer */;
+			targetProxy = 6572F94C2B4E761900507A6C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		6572F9532B4E761900507A6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6572F9542B4E761900507A6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		6572F9562B4E761900507A6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Better Course Explorer/Better_Course_Explorer.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Better Course Explorer/Preview Content\"";
+				DEVELOPMENT_TEAM = 7QY5Z3L4LZ;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Better-Course-Explorer-Info.plist";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ylh.Better-Course-Explorer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		6572F9572B4E761900507A6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Better Course Explorer/Better_Course_Explorer.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Better Course Explorer/Preview Content\"";
+				DEVELOPMENT_TEAM = 7QY5Z3L4LZ;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Better-Course-Explorer-Info.plist";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ylh.Better-Course-Explorer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		6572F9592B4E761900507A6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7QY5Z3L4LZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ylh.Better-Course-ExplorerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Better Course Explorer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Better Course Explorer";
+			};
+			name = Debug;
+		};
+		6572F95A2B4E761900507A6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7QY5Z3L4LZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ylh.Better-Course-ExplorerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Better Course Explorer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Better Course Explorer";
+			};
+			name = Release;
+		};
+		6572F95C2B4E761900507A6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7QY5Z3L4LZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ylh.Better-Course-ExplorerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Better Course Explorer";
+			};
+			name = Debug;
+		};
+		6572F95D2B4E761900507A6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7QY5Z3L4LZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ylh.Better-Course-ExplorerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Better Course Explorer";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6572F92B2B4E761700507A6C /* Build configuration list for PBXProject "Better Course Explorer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6572F9532B4E761900507A6C /* Debug */,
+				6572F9542B4E761900507A6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6572F9552B4E761900507A6C /* Build configuration list for PBXNativeTarget "Better Course Explorer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6572F9562B4E761900507A6C /* Debug */,
+				6572F9572B4E761900507A6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6572F9582B4E761900507A6C /* Build configuration list for PBXNativeTarget "Better Course ExplorerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6572F9592B4E761900507A6C /* Debug */,
+				6572F95A2B4E761900507A6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6572F95B2B4E761900507A6C /* Build configuration list for PBXNativeTarget "Better Course ExplorerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6572F95C2B4E761900507A6C /* Debug */,
+				6572F95D2B4E761900507A6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6502C31F2B4FA3C90045CDA4 /* XCRemoteSwiftPackageReference "course-explorer-api" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ylh27/course-explorer-api.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6502C3262B4FB4910045CDA4 /* course-explorer-api */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6502C31F2B4FA3C90045CDA4 /* XCRemoteSwiftPackageReference "course-explorer-api" */;
+			productName = "course-explorer-api";
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 6572F9282B4E761700507A6C /* Project object */;
+}
