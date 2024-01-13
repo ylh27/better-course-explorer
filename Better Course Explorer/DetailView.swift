@@ -18,12 +18,12 @@ struct DetailView: View {
                     HStack {
                         Text("Course")
                         Spacer()
-                        Text(section.course!).multilineTextAlignment(.trailing)
+                        Text(section.course).multilineTextAlignment(.trailing)
                     }
                     HStack {
                         Text("Department")
                         Spacer()
-                        Text(section.subject!).multilineTextAlignment(.trailing)
+                        Text(section.subject).multilineTextAlignment(.trailing)
                     }
                 }
                 ForEach(section.meetings, id: \.id) { meeting in
@@ -31,32 +31,32 @@ struct DetailView: View {
                         HStack {
                             Text("Type")
                             Spacer()
-                            Text(meeting.type!).multilineTextAlignment(.trailing)
+                            Text(meeting.type).multilineTextAlignment(.trailing)
                         }
                         HStack {
                             Text("Start")
                             Spacer()
-                            Text(meeting.start!).multilineTextAlignment(.trailing)
+                            Text(meeting.start).multilineTextAlignment(.trailing)
                         }
                         HStack {
                             Text("End")
                             Spacer()
-                            Text(meeting.end!).multilineTextAlignment(.trailing)
+                            Text(meeting.end).multilineTextAlignment(.trailing)
                         }
                         HStack {
                             Text("Days")
                             Spacer()
-                            Text(meeting.daysOfTheWeek!).multilineTextAlignment(.trailing)
+                            Text(meeting.daysOfTheWeek).multilineTextAlignment(.trailing)
                         }
                         HStack {
                             Text("Building")
                             Spacer()
-                            Text(meeting.buildingName!).multilineTextAlignment(.trailing)
+                            Text(meeting.buildingName).multilineTextAlignment(.trailing)
                         }
                         HStack {
                             Text("Room")
                             Spacer()
-                            Text(meeting.roomNumber!).multilineTextAlignment(.trailing)
+                            Text(meeting.roomNumber).multilineTextAlignment(.trailing)
                         }
                         NavigationLink(destination: Text("More")) {
                             Text("More")
@@ -64,7 +64,7 @@ struct DetailView: View {
                     }
                 }
             }
-            .navigationTitle(section.subjectID! + " " + section.courseID! + " " + section.sectionNumber!)
+            .navigationTitle(section.subjectID + " " + section.courseID + " " + section.sectionNumber)
         }
     }
 }

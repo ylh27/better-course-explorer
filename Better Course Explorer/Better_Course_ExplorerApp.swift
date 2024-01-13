@@ -9,9 +9,17 @@ import SwiftUI
 
 @main
 struct Better_Course_ExplorerApp: App {
+    @StateObject private var sectionsData = SectionsData()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(sectionsData: sectionsData)
+                /*.task {
+                    sectionsData.load()
+                }
+                .onChange(of: sectionsData.courses) { _ in
+                    sectionsData.save()
+                }*/
         }
     }
 }

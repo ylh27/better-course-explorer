@@ -9,13 +9,16 @@ import SwiftUI
 import course_explorer_api
 
 struct ListView: View {
-    let sections: [CourseSection]
+    let courses: [Course]
     
     var body: some View {
         NavigationView {
-            List(sections, id: \.id) { section in
+            List(courses, id: \.id) { course in
+                let sectionString = course.course + " (" + course.subjectID + " " + course.courseID + ") "
                 VStack {
-                    Text(section.course!)
+                    NavigationLink(destination: CourseView(course: course)) {
+                        Text(sectionString)
+                    }
                 }
             }
         }
@@ -24,5 +27,5 @@ struct ListView: View {
     }
 
 #Preview {
-    ListView(sections: [])
+    ListView(courses: [])
 }

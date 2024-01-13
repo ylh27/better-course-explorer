@@ -9,42 +9,52 @@ import SwiftUI
 import course_explorer_api
 
 struct ContentView: View {
-    @State private var sections: [CourseSection] = []
+    @ObservedObject var sectionsData: SectionsData
+    @State private var showingAlert = false
+    @State private var semester: String = "winter"
+    @State private var selectedSubject: String = ""
     
     var body: some View {
         NavigationStack {
             List {
-                NavigationLink(destination: ListView(sections: sections)) {
-                    Text("ListView")
-                }
-                Text(String(sections.count) + " Sections Fetched")
-                Button {
-                    fetchData()
-                } label: {
-                    Text("Fetch")
-                }
+                Section(content: {
+                    NavigationLink(destination: ListView(courses: sectionsData.courses)) {
+                        Text("List")
+                    }
+                    /*NavigationLink(destination: RoomSearchView()) {
+                        Text("Search by Room")
+                     }*/
+                    Text(String(sectionsData.courses.count) + " Courses Fetched")
+                    })
+                Section(content: {
+                    Picker("Semester", selection: $semester) {
+                        Text("Winter").tag("winter")
+                        Text("Spring").tag("spring")
+                        Text("Summer").tag("summer")
+                        Text("Fall").tag("fall")
+                    }
+                }, header: {
+                    Text("Search Parameters")
+                })
+                Section(content: {
+                    TextField("Subject", text: $selectedSubject)
+                    Button {
+                        sectionsData.fetchSubjectData(baseURL: "https://courses.illinois.edu/cisapp/explorer/schedule", year: "2024", semester: semester, subject: selectedSubject.uppercased())
+                        showingAlert = true
+                    } label: {
+                        Text("Fetch " + selectedSubject.uppercased())
+                    }
+                        .alert("Fetching Data\nPlease Be Patient", isPresented: $showingAlert) {
+                        Button("OK") { }
+                        }
+                }, header: {
+                    Text("Search by Subject")
+                })
             }
         }
     }
-    
-    func fetchData() {
-        print("fetching data")
-        traverseSubject(urlPrefix: "https://courses.illinois.edu/cisapp/explorer/schedule/2024/spring/AAS") { list in
-            print("fetched data")
-            if list == nil {
-                print("nil data")
-                return
-            } else {
-                self.sections = list!
-                print("great success!")
-                print(String(self.sections.count) + " sections")
-                return
-            }
-        }
-    }
-
 }
 
 #Preview {
-    ContentView()
+    ContentView(sectionsData: SectionsData())
 }
