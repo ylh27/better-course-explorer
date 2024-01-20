@@ -14,12 +14,15 @@ struct Better_Course_ExplorerApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView(sectionsData: sectionsData)
-                /*.task {
+                .task {
                     sectionsData.load()
                 }
                 .onChange(of: sectionsData.courses) { _ in
                     sectionsData.save()
-                }*/
+                }
+                .onChange(of: sectionsData.buildingNames) { _ in
+                    sectionsData.buildingsSave()
+                }
         }
     }
 }

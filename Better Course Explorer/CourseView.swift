@@ -14,7 +14,25 @@ struct CourseView: View {
     var body: some View {
         NavigationView {
             List {
-                
+                Section {
+                    HStack {
+                        Text("Course")
+                        Spacer()
+                        Text(course.course).multilineTextAlignment(.trailing)
+                    }
+                    HStack {
+                        Text("Department")
+                        Spacer()
+                        Text(course.subject).multilineTextAlignment(.trailing)
+                    }
+                }
+                Section("Sections") {
+                    ForEach(course.sections, id: \.id) { section in
+                        NavigationLink(destination: DetailView(section: section)) {
+                            Text(section.sectionNumber)
+                        }
+                    }
+                }
             }
             .navigationTitle(course.subjectID + " " + course.courseID + " ")
         }
@@ -22,6 +40,6 @@ struct CourseView: View {
 }
 /*
 #Preview {
-    CourseView(course: course_explorer_api.Course()
+    CourseView(course: )
 }
 */

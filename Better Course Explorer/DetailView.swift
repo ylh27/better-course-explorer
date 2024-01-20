@@ -27,7 +27,7 @@ struct DetailView: View {
                     }
                 }
                 ForEach(section.meetings, id: \.id) { meeting in
-                    Section {
+                    Section("Meeting " + meeting.id) {
                         HStack {
                             Text("Type")
                             Spacer()

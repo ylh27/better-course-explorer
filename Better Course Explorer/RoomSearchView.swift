@@ -7,36 +7,65 @@
 
 import SwiftUI
 import course_explorer_api
-/*
+
 struct RoomSearchView: View {
-    let sections: [CourseSection]
-    @State private var searchText = ""
+    @ObservedObject var sectionsData: SectionsData
+    @State private var searchBuildingName = ""
+    @State private var searchRoomNumber = ""
+    @State private var resultList: [CourseSection] = []
+    @State private var isShowing: Bool = false
     
     var body: some View {
         NavigationStack {
             List {
-                ForEach(searchResults, id: \.self) { name in
-                    NavigationLink {
-                        Text(name)
-                    } label: {
-                        Text(name)
+                Picker("Building Name", selection: $searchBuildingName) {
+                    ForEach(Array(sectionsData.buildingNames), id: \.self) { buildingName in
+                        Text(buildingName).tag(buildingName)
                     }
                 }
+                HStack {
+                    Text("Room Number")
+                    Spacer()
+                    TextField("Room Number", text: $searchRoomNumber)
+                        .multilineTextAlignment(.trailing)
+                        .keyboardType(.numberPad)
+                }
+                Button {
+                    resultList = roomSearch(courseList: sectionsData.courses, buildingName: searchBuildingName, roomNumber: searchRoomNumber)
+                    isShowing = true
+                } label: {
+                    Text("Search")
+                }
             }
-            .navigationTitle("Contacts")
-        }
-        .searchable(text: $searchText)
-    }
-    
-    var searchResults: [String] {
-        if searchText.isEmpty {
-            return sections
-        } else {
-            return sections.filter { $0.contains(searchText) }
+            .navigationTitle("Search")
+            .sheet(isPresented: $isShowing) {
+                NavigationStack {
+                    ResultView(courseSections: resultList)
+                }
+            }
         }
     }
 }
 
+func roomSearch(courseList: [Course], buildingName: String, roomNumber: String) -> [CourseSection] {
+    var returnList: [CourseSection] = []
+    
+    for course in courseList {
+        for section in course.sections {
+            for meeting in section.meetings {
+                if meeting.buildingName == buildingName {
+                    if meeting.roomNumber == roomNumber || roomNumber.isEmpty {
+                        returnList.append(section)
+                    }
+                }
+            }
+        }
+    }
+    
+    return returnList
+}
+/*
 #Preview {
     RoomSearchView()
-}*/
+}
+*/

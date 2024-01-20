@@ -11,6 +11,7 @@ import course_explorer_api
 struct ContentView: View {
     @ObservedObject var sectionsData: SectionsData
     @State private var showingAlert = false
+    @State private var year: String = "2024"
     @State private var semester: String = "winter"
     @State private var selectedSubject: String = ""
     
@@ -19,38 +20,39 @@ struct ContentView: View {
             List {
                 Section(content: {
                     NavigationLink(destination: ListView(courses: sectionsData.courses)) {
-                        Text("List")
+                        Text("Course List")
                     }
-                    /*NavigationLink(destination: RoomSearchView()) {
+                    NavigationLink(destination: RoomSearchView(sectionsData: sectionsData)) {
                         Text("Search by Room")
-                     }*/
+                    }
                     Text(String(sectionsData.courses.count) + " Courses Fetched")
+                    Text("Last Successful Fetch at " + sectionsData.lastSuccess.formatted(date: .omitted, time: .standard))
                     })
-                Section(content: {
+                Section("Fetch Parameters") {
+                    Picker("Year", selection: $year) {
+                        ForEach(sectionsData.years.indices) { index in
+                            Text(sectionsData.years[index]).tag(sectionsData.years[index])
+                        }
+                    }
                     Picker("Semester", selection: $semester) {
                         Text("Winter").tag("winter")
                         Text("Spring").tag("spring")
                         Text("Summer").tag("summer")
                         Text("Fall").tag("fall")
                     }
-                }, header: {
-                    Text("Search Parameters")
-                })
-                Section(content: {
-                    TextField("Subject", text: $selectedSubject)
                     Button {
-                        sectionsData.fetchSubjectData(baseURL: "https://courses.illinois.edu/cisapp/explorer/schedule", year: "2024", semester: semester, subject: selectedSubject.uppercased())
-                        showingAlert = true
+                        sectionsData.fetchSemester(baseURL: "https://courses.illinois.edu/cisapp/explorer/schedule", year: year, semester: semester)
                     } label: {
-                        Text("Fetch " + selectedSubject.uppercased())
+                        Text("Fetch " + year + " " + semester.capitalized)
                     }
                         .alert("Fetching Data\nPlease Be Patient", isPresented: $showingAlert) {
-                        Button("OK") { }
+                            Button("OK") { }
                         }
-                }, header: {
-                    Text("Search by Subject")
-                })
+                }
             }
+        }
+        .onAppear {
+            sectionsData.getYearsList(baseURL: "https://courses.illinois.edu/cisapp/explorer/schedule")
         }
     }
 }

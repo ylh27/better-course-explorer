@@ -10,6 +10,39 @@ import course_explorer_api
 
 class SectionsData: ObservableObject {
     @Published var courses: [Course] = []
+    @Published var lastSuccess: Date = Date.now
+    @Published var years: [String] = ["2024"]
+    @Published var buildingNames: [String] = []
+    
+    func fetchBuildingNames() -> Set<String> {
+        var list: Set<String> = []
+        for course in courses {
+            for section in course.sections {
+                for meeting in section.meetings {
+                    list.insert(meeting.buildingName)
+                }
+            }
+        }
+        return list
+    }
+    
+    func fetchSemester(baseURL: String, year: String, semester: String) {
+        print("fetching data for " + year + " " + semester)
+        traverseSemester(urlPrefix: baseURL+"/"+year+"/"+semester) { list in
+            if list == nil {
+                print("nil list returned")
+                return
+            } else {
+                self.courses = list!
+                self.lastSuccess = Date.now
+                print("list updated to full semester")
+                print(String(self.courses.count) + " secitons")
+                self.buildingNames = self.fetchBuildingNames().sorted()
+                print("building names listed")
+                return
+            }
+        }
+    }
     
     func fetchSubjectData(baseURL: String, year: String, semester: String, subject: String) {
         print("fetching data")
@@ -20,8 +53,26 @@ class SectionsData: ObservableObject {
                 return
             } else {
                 self.courses = list!
+                self.lastSuccess = Date.now
                 print("great success!")
                 print(String(self.courses.count) + " sections")
+                return
+            }
+        }
+    }
+    
+    func getYearsList(baseURL: String) {
+        print("fetching years list")
+        getYears(urlPrefix: baseURL) { list in
+            print("fetched years")
+            if list == nil {
+                print("nil data")
+                return
+            } else {
+                self.years = list!
+                print("fetched years!")
+                print(String(self.years.count) + " years")
+                print(self.years)
                 return
             }
         }
@@ -35,12 +86,26 @@ class SectionsData: ObservableObject {
         }
     }
     
+    func buildingsSave() {
+        let buildingEncoder = JSONEncoder()
+        if let buildingEncoded = try? buildingEncoder.encode(buildingNames) {
+            let defaults = UserDefaults.standard
+            defaults.set(buildingEncoded, forKey: "SavedBuildings")
+        }
+    }
+    
     func load() {
         let defaults = UserDefaults.standard
         if let savedCourses = defaults.object(forKey: "SavedCourses") as? Data {
             let decoder = JSONDecoder()
             if let loadedCourses = try? decoder.decode([Course].self, from: savedCourses) {
                 self.courses = loadedCourses
+            }
+        }
+        if let savedBuildings = defaults.object(forKey: "SavedBuildings") as? Data {
+            let decoder = JSONDecoder()
+            if let loadedBuildings = try? decoder.decode([String].self, from: savedBuildings) {
+                self.buildingNames = loadedBuildings
             }
         }
     }
