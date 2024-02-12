@@ -21,6 +21,7 @@
 		6572F9462B4E761900507A6C /* Better_Course_ExplorerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6572F9452B4E761900507A6C /* Better_Course_ExplorerTests.swift */; };
 		6572F9502B4E761900507A6C /* Better_Course_ExplorerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6572F94F2B4E761900507A6C /* Better_Course_ExplorerUITests.swift */; };
 		6572F9522B4E761900507A6C /* Better_Course_ExplorerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6572F9512B4E761900507A6C /* Better_Course_ExplorerUITestsLaunchTests.swift */; };
+		65F611EC2B76D3DB009C14F7 /* WeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F611EB2B76D3DB009C14F7 /* WeekView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		6572F94B2B4E761900507A6C /* Better Course ExplorerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Better Course ExplorerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6572F94F2B4E761900507A6C /* Better_Course_ExplorerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Better_Course_ExplorerUITests.swift; sourceTree = "<group>"; };
 		6572F9512B4E761900507A6C /* Better_Course_ExplorerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Better_Course_ExplorerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		65F611EB2B76D3DB009C14F7 /* WeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				6572F9332B4E761700507A6C /* Better_Course_ExplorerApp.swift */,
 				6572F9352B4E761700507A6C /* ContentView.swift */,
 				6502C3322B52E7A70045CDA4 /* RoomSearchView.swift */,
+				65F611EB2B76D3DB009C14F7 /* WeekView.swift */,
 				656EC9FC2B5C8352008D9825 /* ResultView.swift */,
 				6502C32C2B518BE90045CDA4 /* ListView.swift */,
 				6502C32E2B51A0C10045CDA4 /* SectionsData.swift */,
@@ -301,6 +304,7 @@
 				6572F9362B4E761700507A6C /* ContentView.swift in Sources */,
 				6502C3292B4FB4AA0045CDA4 /* DetailView.swift in Sources */,
 				656EC9FD2B5C8352008D9825 /* ResultView.swift in Sources */,
+				65F611EC2B76D3DB009C14F7 /* WeekView.swift in Sources */,
 				6572F9342B4E761700507A6C /* Better_Course_ExplorerApp.swift in Sources */,
 				6502C3312B52E4DD0045CDA4 /* CourseView.swift in Sources */,
 			);

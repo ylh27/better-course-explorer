@@ -14,6 +14,7 @@ struct RoomSearchView: View {
     @State private var searchRoomNumber = ""
     @State private var resultList: [CourseSection] = []
     @State private var isShowing: Bool = false
+    @State private var isShowingWeek: Bool = false
     
     var body: some View {
         NavigationStack {
@@ -30,17 +31,33 @@ struct RoomSearchView: View {
                         .multilineTextAlignment(.trailing)
                         .keyboardType(.numberPad)
                 }
+                /*Button {
+                    resultList = roomSearch(courseList: sectionsData.courses, buildingName: searchBuildingName, roomNumber: searchRoomNumber)
+                    isShowing = false
+                    isShowingWeek = true
+                } label: {
+                    Text("Week View")
+                }*/
                 Button {
                     resultList = roomSearch(courseList: sectionsData.courses, buildingName: searchBuildingName, roomNumber: searchRoomNumber)
                     isShowing = true
+                    isShowingWeek = false
                 } label: {
                     Text("Search")
                 }
             }
             .navigationTitle("Search")
+            .onAppear {
+                resultList = roomSearch(courseList: sectionsData.courses, buildingName: searchBuildingName, roomNumber: searchRoomNumber)
+            }
             .sheet(isPresented: $isShowing) {
                 NavigationStack {
                     ResultView(courseSections: resultList)
+                }
+            }
+            .sheet(isPresented: $isShowingWeek) {
+                NavigationStack {
+                    WeekView()
                 }
             }
         }
