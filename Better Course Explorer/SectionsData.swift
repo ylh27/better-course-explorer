@@ -11,7 +11,7 @@ import course_explorer_api
 class SectionsData: ObservableObject {
     @Published var courses: [Course] = []
     @Published var lastSuccess: Date = Date.now
-    @Published var years: [String] = ["2024"]
+    @Published var years: [String] = []
     @Published var buildingNames: [String] = []
     
     func fetchBuildingNames() -> Set<String> {
