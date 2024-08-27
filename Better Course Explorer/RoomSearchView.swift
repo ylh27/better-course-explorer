@@ -8,6 +8,9 @@
 import SwiftUI
 import course_explorer_api
 
+var returnListActive: [CourseSection] = []
+var returnListInactive: [CourseSection] = []
+
 struct RoomSearchView: View {
     @ObservedObject var sectionsData: SectionsData
     @State private var searchBuildingName = ""
@@ -39,7 +42,7 @@ struct RoomSearchView: View {
                     Text("Week View")
                 }*/
                 Button {
-                    resultList = roomSearch(courseList: sectionsData.courses, buildingName: searchBuildingName, roomNumber: searchRoomNumber)
+                    roomSearch(courseList: sectionsData.courses, buildingName: searchBuildingName, roomNumber: searchRoomNumber)
                     isShowing = true
                     isShowingWeek = false
                 } label: {
@@ -47,12 +50,9 @@ struct RoomSearchView: View {
                 }
             }
             .navigationTitle("Search")
-            .onAppear {
-                resultList = roomSearch(courseList: sectionsData.courses, buildingName: searchBuildingName, roomNumber: searchRoomNumber)
-            }
             .sheet(isPresented: $isShowing) {
                 NavigationStack {
-                    ResultView(courseSections: resultList)
+                    ResultView(courseSectionsActive: returnListActive, courseSectionsInactive: returnListInactive)
                 }
             }
             .sheet(isPresented: $isShowingWeek) {
@@ -64,23 +64,32 @@ struct RoomSearchView: View {
     }
 }
 
-func roomSearch(courseList: [Course], buildingName: String, roomNumber: String) -> [CourseSection] {
-    var returnList: [CourseSection] = []
+func roomSearch(courseList: [Course], buildingName: String, roomNumber: String) {
+    // clear existing courses
+    returnListActive.removeAll()
+    returnListInactive.removeAll()
     
     for course in courseList {
         for section in course.sections {
             for meeting in section.meetings {
                 if meeting.buildingName == buildingName {
                     if meeting.roomNumber == roomNumber || roomNumber.isEmpty {
-                        returnList.append(section)
+                        if isActive(meeting: meeting) {
+                            returnListActive.append(section)
+                        } else {
+                            returnListInactive.append(section)
+                        }
                     }
                 }
             }
         }
     }
-    
-    return returnList
 }
+
+func isActive(meeting: Meeting) -> Bool {
+    return false
+}
+
 /*
 #Preview {
     RoomSearchView()
