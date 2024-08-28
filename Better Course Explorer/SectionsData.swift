@@ -27,53 +27,65 @@ class SectionsData: ObservableObject {
     }
     
     func fetchSemester(baseURL: String, year: String, semester: String) {
-        print("fetching data for " + year + " " + semester)
-        traverseSemester(urlPrefix: baseURL+"/"+year+"/"+semester) { list in
-            if list == nil {
-                print("nil list returned")
-                return
-            } else {
-                self.courses = list!
-                self.lastSuccess = Date.now
-                print("list updated to full semester")
-                print(String(self.courses.count) + " secitons")
-                self.buildingNames = self.fetchBuildingNames().sorted()
-                print("building names listed")
-                return
+        DispatchQueue.global().async {
+            print("fetching data for " + year + " " + semester)
+            traverseSemester(urlPrefix: baseURL+"/"+year+"/"+semester) { list in
+                if list == nil {
+                    print("nil list returned")
+                    return
+                } else {
+                    DispatchQueue.main.async {
+                        self.courses = list!
+                        self.lastSuccess = Date.now
+                        self.buildingNames = self.fetchBuildingNames().sorted()
+                    }
+                    print("list updated to full semester")
+                    print(String(self.courses.count) + " secitons")
+                    print("building names listed")
+                    return
+                }
             }
         }
     }
     
     func fetchSubjectData(baseURL: String, year: String, semester: String, subject: String) {
-        print("fetching data")
-        traverseSubject(urlPrefix: baseURL+"/"+year+"/"+semester+"/"+subject) { list in
-            print("fetched data")
-            if list == nil {
-                print("nil data")
-                return
-            } else {
-                self.courses = list!
-                self.lastSuccess = Date.now
-                print("great success!")
-                print(String(self.courses.count) + " sections")
-                return
+        DispatchQueue.global().async {
+            print("fetching data")
+            traverseSubject(urlPrefix: baseURL+"/"+year+"/"+semester+"/"+subject) { list in
+                print("fetched data")
+                if list == nil {
+                    print("nil data")
+                    return
+                } else {
+                    DispatchQueue.main.async {
+                        self.courses = list!
+                        self.lastSuccess = Date.now
+                    }
+                    print("great success!")
+                    print(String(self.courses.count) + " sections")
+                    return
+                }
             }
         }
     }
     
     func getYearsList(baseURL: String) {
-        print("fetching years list")
-        getYears(urlPrefix: baseURL) { list in
-            print("fetched years")
-            if list == nil {
-                print("nil data")
-                return
-            } else {
-                self.years = list!
-                print("fetched years!")
-                print(String(self.years.count) + " years")
-                print(self.years)
-                return
+        DispatchQueue.global().async {
+            print("fetching years list")
+            getYears(urlPrefix: baseURL) { list in
+                print("fetched years")
+                if list == nil {
+                    print("nil data")
+                    return
+                } else {
+                    DispatchQueue.main.async {
+                        self.years = list!
+                    }
+                    print("fetched years!")
+                    print(String(self.years.count) + " years")
+                    print(self.years)
+                    return
+                }
             }
         }
     }

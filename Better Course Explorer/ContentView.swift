@@ -29,20 +29,10 @@ struct ContentView: View {
                     Text("Last Successful Fetch at " + sectionsData.lastSuccess.formatted(date: .omitted, time: .standard))
                     })
                 Section("Fetch Parameters") {
-                    /*
-                    // didn't really work
                     Picker("Year", selection: $year) {
-                        ForEach(sectionsData.years.indices) { index in
-                            Text(sectionsData.years[index]).tag(sectionsData.years[index])
+                        ForEach(sectionsData.years, id: \.self) { string in
+                            Text(string).tag(string)
                         }
-                    }
-                    */
-                     HStack {
-                        Text("Year")
-                        Spacer()
-                        TextField("Year", text: $year)
-                            .multilineTextAlignment(.trailing)
-                            .keyboardType(.numberPad)
                     }
                     Picker("Semester", selection: $semester) {
                         Text("Winter").tag("winter")
