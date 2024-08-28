@@ -23,8 +23,8 @@ struct ListView: View {
                 }
             }
         }
-        .searchable(text: $searchText)
         .navigationTitle("Course List")
+        .searchable(text: $searchText)
     }
     
     var searchResult: [Course] {

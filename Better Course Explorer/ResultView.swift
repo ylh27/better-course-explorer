@@ -42,15 +42,7 @@ struct ResultView: View {
                     }
                 }
             }
-            /*List(courseSections, id: \.id) { section in
-                    let sectionString = section.course + " (" + section.subjectID + " " + section.courseID + " " + section.sectionNumber + ") "
-                    VStack {
-                        NavigationLink(destination: DetailView(section: section)) {
-                            Text(sectionString)
-                        }
-                    }
-                }
-            }*/
+            .toolbar(.hidden)
         }
     }
 }

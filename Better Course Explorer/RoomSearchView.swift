@@ -87,6 +87,50 @@ func roomSearch(courseList: [Course], buildingName: String, roomNumber: String) 
 }
 
 func isActive(meeting: Meeting) -> Bool {
+    let inFormatter = DateFormatter()
+    inFormatter.locale = NSLocale(localeIdentifier: "en_US") as Locale
+    inFormatter.timeZone = TimeZone(abbreviation: "CST")
+    inFormatter.dateFormat = "hh:mm a"
+
+    let startOp = inFormatter.date(from: meeting.start)
+    let endOp = inFormatter.date(from: meeting.end)
+    
+    let calendar = Calendar.current
+    
+    let startTime = calendar.dateComponents([.hour, .minute], from: startOp!)
+    let endTime = calendar.dateComponents([.hour, .minute], from: endOp!)
+    let currTime = calendar.dateComponents([.hour, .minute, .weekday], from: Date())
+    
+    switch currTime.weekday! {
+    case 2: // mon
+        if !meeting.daysOfTheWeek.contains("M") {
+            return false
+        }
+    case 3: // tue
+        if !meeting.daysOfTheWeek.contains("T") {
+            return false
+        }
+    case 4: // wed
+        if !meeting.daysOfTheWeek.contains("W") {
+            return false
+        }
+    case 5: // thu
+        if !meeting.daysOfTheWeek.contains("R") {
+            return false
+        }
+    case 6: // fri
+        if !meeting.daysOfTheWeek.contains("F") {
+            return false
+        }
+    default:
+        return false
+    }
+    
+    if startTime.hour! <= currTime.hour! && startTime.minute! <= currTime.minute! &&
+        endTime.hour! >= currTime.hour! && endTime.minute! >= currTime.minute! {
+        return true
+    }
+    
     return false
 }
 
